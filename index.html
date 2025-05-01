@@ -27,7 +27,7 @@
                 <img src="./images/icons8-r-100 (1).png" alt="">
             </div>
             <div class="formitems">
-                <form id="contact-form" action="">
+                <form id="contact-form" >
 
                     <input 
                     name="name"
@@ -35,7 +35,8 @@
                     class="form-control" 
                     id="from_name" 
                     placeholder="Your Name" 
-                    required>
+                    >
+                    <span style="color: red; font-family: monospace; margin-top: 10px;" id="name-error"></span>
                     <br>
 
                     <input  
@@ -45,33 +46,25 @@
                     class="form-control" 
                     id="email" 
                     name="email" 
-                    required>
+                    >
                     <br>
 
                     <input 
-                    name="subject"
-                    type="text" 
+                    name="password"
+                    type="password" 
                     class="form-control" 
-                    id="subject" 
-                    placeholder="subject" 
-                    required>
-                    <br>
-
-                    <textarea 
-                    name="message"
-                    id="message" 
-                    class="form-control" 
-                    placeholder="message"
-                    style="resize: both; min-width: 150px; min-height: 100px;" 
-                    required></textarea>
+                    id="password" 
+                    placeholder="password" 
+                    >
                     <br>
 
                     <button type="submit " id="submit">Submit</button>
                     <div style="color: aliceblue;" id="formStatus"></div>
 
                     <div id="formStatus">
-                        
+
                     </div>
+                    <div id="displayError"></div>
                 </form>
             </div>
         </div>
