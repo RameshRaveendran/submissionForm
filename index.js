@@ -6,12 +6,24 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 
 const error_name = document.getElementById('name-error');
+const erroremail = document.getElementById('email-error');
 
 form.addEventListener('submit',(e)=>{
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(name.value === "" || name.value == null){
         e.preventDefault();
         error_name.innerHTML="name is requered";
         
+    }else{
+        error_name.innerHTML="";
+    }
+
+    if(!email.value.match(emailRegex)){
+        e.preventDefault();
+        erroremail.innerHTML="proper email is requered";
+        
+    }else{
+        erroremailr.innerHTML="";
     }
 })
 
